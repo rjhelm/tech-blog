@@ -107,8 +107,18 @@ router.get('/post-comments', (req, res) => {
                 attributes: ['username']
             }
         ]
-    }).then(!dbPostData)
+    }).then(dbPostData => {
+        if (!dbPostData) {
+            res.status(404).json({ message: 'No post found matching this id.' });
+            return;
+        }
+        const post = dbPostData.get({ plain: true });
+        res.render('post-comments', { post, loggedIn: req.session.loggedIn });
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
     
-})
+});
 
 module.exports = router;
