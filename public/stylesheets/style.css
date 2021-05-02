@@ -1,8 +1,8 @@
 :root {
-    --primary: #5d1380;
-    --secondary: #777777;
-    --tertiary: #00cece;
-    --light-dark: #686568;
+    --primary: #19e48f;
+    --secondary: silver;
+    --tertiary: #ff5555;
+    --light-dark: #797979;
     --dark: #0f0808;
     --border-radius: .2rem;
 }
@@ -55,13 +55,13 @@ p {
     display: block;
     margin: 6px 0;
     width: 100%;
-    border: none;
+    border: 1px solid black;
     outline: none;
-    color: silver;
+    color: black;
     font-size: 1.1rem;
     text-decoration: none;
     border-radius: var(--border-radius);
-    background-color: var(--light-dark);
+    background-color: var(--primary);
     padding: 5px 5px;
     transform: translate(-1px, -1.5px);
 }
@@ -84,7 +84,7 @@ p {
     margin-top: 20px;
     padding: 17px;
     text-decoration: none;
-    border: none;
+    border: 1px solid black;
     outline: none;
     width: auto;
     border-radius: var(--border-radius);
