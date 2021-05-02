@@ -11,6 +11,7 @@ Comment.init({
     comment_text: {
         type: DataTypes.STRING,
         validate: {
+
             len: [3]
         }
     },
@@ -29,11 +30,11 @@ Comment.init({
             model: 'post',
             key: 'id'
         }
-    },
-        sequelize,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'comment' 
+    }
+}, {
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'comment'
 });
-
 module.exports = Comment;
