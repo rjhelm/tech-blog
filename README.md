@@ -17,13 +17,13 @@
 
 A blogging web app that allows users to register and blog about technology. Users can read other posts and comment on posts, allowing for social interaction among technology enthusiasts.
 
-![Tech-Blog]()
+![Tech-Blog](https://github.com/rjhelm/tech-blog/blob/main/assets/images/tech-blog.PNG)
 
-![Login]()
+![Login](https://github.com/rjhelm/tech-blog/blob/main/assets/images/login.PNG)
 
-![Dashboard || Logged-In]()
+![Dashboard || Logged-In](https://github.com/rjhelm/tech-blog/blob/main/assets/images/loggedin-dash.PNG)
 
-![Update || Delete]()
+![Update || Delete](https://github.com/rjhelm/tech-blog/blob/main/assets/images/update-delete.PNG)
 
 [Deployed on Heroku](https://fathomless-chamber-99363.herokuapp.com/)
 
@@ -42,16 +42,16 @@ A blogging web app that allows users to register and blog about technology. User
 
 Several technologies were used to create this application:
 
-- "bcrypt": "^5.0.1",
-- "connect-session-sequelize": "^7.1.1",
-- "dotenv": "^8.2.0",
-- "express": "^4.17.1",
-- "express-handlebars": "^5.3.0",
-- "express-session": "^1.17.1",
-- "handlebars": "^4.7.7",
-- "mysql2": "^2.2.5",
-- "nodemon": "^2.0.7",
-- "sequelize": "^6.6.2"
+- bcrypt
+- connect-session-sequelize
+- dotenv
+- Express.js
+- Express Handlebars
+- Express Session
+- Handlebars
+- MySQL2
+- nodemon,
+- Sequelize
 
 ## MVC
 
