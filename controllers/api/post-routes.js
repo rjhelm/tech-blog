@@ -1,8 +1,9 @@
-const router = require("express").Router();
-const { Post, User, Comment } = require("../../models");
-const sequelize = require("../../config/connection");
-const withAuth = require("../../utils/auth");
+const router = require("express").Router(); // import router
+const { Post, User, Comment } = require("../../models"); // required for these routes
+const sequelize = require("../../config/connection"); // connect to the database
+const withAuth = require("../../utils/auth"); //ensure user is logged in
 
+// new post is added, content is found 
 router.get("/", (req, res) => {
   console.log("======================");
   Post.findAll({
@@ -22,14 +23,14 @@ router.get("/", (req, res) => {
         },
       },
     ],
-  })
-    .then((dbPostData) => res.json(dbPostData.reverse()))
+  }).then((dbPostData) => res.json(dbPostData.reverse()))
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
 });
 
+// when a post is selected get all data pertaining to post
 router.get("/:id", (req, res) => {
   Post.findOne({
     where: {
@@ -50,8 +51,7 @@ router.get("/:id", (req, res) => {
         },
       },
     ],
-  })
-    .then((dbPostData) => {
+  }).then((dbPostData) => {
       if (!dbPostData) {
         res.status(404).json({ message: "No post found with this id" });
         return;
@@ -64,10 +64,11 @@ router.get("/:id", (req, res) => {
     });
 });
 
+// new post from logged in user
 router.post("/", withAuth, (req, res) => {
-  Post.create({
+  Post.create({ 
     title: req.body.title,
-    content: req.body.content,
+    content: req.body.content,      // call on Post model
     user_id: req.session.user_id,
   })
     .then((dbPostData) => res.json(dbPostData))
@@ -77,6 +78,7 @@ router.post("/", withAuth, (req, res) => {
     });
 });
 
+// logged in user updates post creating new post id
 router.put("/:id", withAuth, (req, res) => {
   Post.update(
     {
@@ -102,6 +104,7 @@ router.put("/:id", withAuth, (req, res) => {
     });
 });
 
+// logged in user selects delete and database info is removed
 router.delete("/:id", withAuth, (req, res) => {
   Post.destroy({
     where: {

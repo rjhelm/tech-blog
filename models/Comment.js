@@ -1,6 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+// new model is created as Comment
 class Comment extends Model {}
+
+// Sequelize primary keys || set value types for this model
 Comment.init({
     id: {
         type: DataTypes.INTEGER,
@@ -36,4 +39,5 @@ Comment.init({
     underscored: true,
     modelName: 'comment'
 });
+
 module.exports = Comment;

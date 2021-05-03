@@ -174,7 +174,7 @@ h4 {
 }
 
 .link {
-    color: var(--light-dark);
+    color: var(--primary);
 }
 
 .login-link {
