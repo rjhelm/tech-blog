@@ -61,7 +61,7 @@ p {
     font-size: 1.1rem;
     text-decoration: none;
     border-radius: var(--border-radius);
-    background-color: var(--primary);
+    background-color: var(--light-dark);
     padding: 5px 5px;
     transform: translate(-1px, -1.5px);
 }
