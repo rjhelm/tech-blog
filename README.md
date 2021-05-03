@@ -17,9 +17,13 @@
 
 A blogging web app that allows users to register and blog about technology. Users can read other posts and comment on posts, allowing for social interaction among technology enthusiasts.
 
-![code]()
-
 ![Tech-Blog]()
+
+![Login]()
+
+![Dashboard || Logged-In]()
+
+![Update || Delete]()
 
 [Deployed on Heroku](https://fathomless-chamber-99363.herokuapp.com/)
 
